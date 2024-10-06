@@ -7,10 +7,17 @@ const nextButton = document.querySelector('.carousel-button.next');
 const addToCartButton = document.getElementById('addToCart');
 const cartPopup = document.getElementById('cartPopup');
 const closePopup = document.querySelector('.close-popup');
+const bubble = document.querySelector('.bubble');
+const bar = document.querySelector('.bar');
+const navbar = document.querySelector('.navbar');
 
 let currentIndex = 0;
 
+const cachedCartCount = JSON.parse(localStorage.getItem("cartCount"))
 
+let cartCount = cachedCartCount ? cachedCartCount : 0
+
+bubble.innerHTML = cartCount;
 const fetchData = async () => {
     
     const cachedData = JSON.parse(localStorage.getItem("images"))
@@ -86,7 +93,12 @@ const showCartPopup = () => {
     setTimeout(() => {
         cartPopup.style.display = 'none';
     }, 4000);
+
+    bubble.innerHTML =  ++cartCount;
+    localStorage.setItem("cartCount",JSON.stringify(cartCount))
 }
+
+
 
 addToCartButton.addEventListener('click', showCartPopup);
 
