@@ -157,6 +157,16 @@ body {
     margin: 0;
 }
 
+.price-wrapper{
+    display: flex;
+    align-items: first baseline;
+    gap: 8px;
+}
+.cut-price {
+    text-decoration: line-through;
+    font-size: 16px;
+    color: #1c1c1c44;
+}
 .price {
     font-size: 24px;
 }
@@ -189,6 +199,12 @@ body {
 .color-picker-wrapper {
     flex: 1
 }
+
+.margin-bottom-16 {
+    display: block;
+ margin-bottom: 8px;
+}
+
 .color-picker span {
     display: block;
     height: 30px;
@@ -235,10 +251,10 @@ body {
 button {
     padding: 16px 0px;
     background-color:  #2455f4;
-   border: none;
-   color: white;
-   width: 100%;
-   display: block;
+    border: none;
+    color: white;
+    width: 100%;
+    display: block;
     margin-top:24px;
     cursor: pointer;
     font-size: 20px;
