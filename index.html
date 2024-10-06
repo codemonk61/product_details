@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Bazar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Shop</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div class="breadcrumb">
+            <a href="#">Home</a> &nbsp; / &nbsp; <a href="#">Laptop</a>
+        </div>
+        <div class="product-container">
+            <div class="image-gallery">
+                <div class="carousel">
+                    <button class="carousel-button prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                        </svg>
+                    </button>
+                    <div class="carousel-images">
+                   
+                    </div>
+                    <button class="carousel-button next">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="thumbnails">
+               
+                </div>
+            </div>
+             <div class="product-details">
+                <h1>Apple 2020 Macbook</h1>
+                <p class="price">$856.71</p>
+                <p>Quantity & Ram:</p>
+                <div class="size-and-quantity-picker-wrapper">
+                    <select>
+                        <option>Select Ram</option>
+                        <option>8 GB</option>
+                        <option>16 GB</option>
+                        <option>32 GB</option>
+                        <option>64 GB</option>
+                    </select>
+                    <input type="number" value="1" min="1">
+                </div>
+                <button id="addToCart">Add to Cart</button>
+                <div class="product-description">
+                    <h2>Product Details</h2>
+                    <p>Apple 2020 Macbook Air Apple M1 - (8 GB/256 GB SSD/Mac OS Big Sur) MGN63HN/A (13.3 inch, Space
+                        Grey, 1.29 kg)</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div id="cartPopup" class="cart-popup">
+        <span class="close-popup">&times;</span>
+        <p>Item added to cart</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
