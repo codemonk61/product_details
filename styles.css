@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,6 +12,7 @@ body {
     background-color: #2455f4;
     padding: 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -25,29 +29,22 @@ body {
 
 .cart-icon .bubble {
     position: absolute;
-    top: -8px;
-    right: -8px;
-    height: 16px;
-    width: 16px;
+    top: -12px;
+    right: -12px;
+    height: 20px;
+    width: 20px;
     text-align: center;
-    line-height: 16px;;
+    line-height: 20px;;
     font-size: 12px;
     border-radius: 50%;
     background-color: rgb(252, 252, 5);
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
 
-.navbar ul li {
-    margin: 0 15px;
-}
 
-.navbar ul li a {
+.navbar a {
+    font-size: 30px;
+    font-weight: 600;
     text-decoration: none;
     color: white;
 }
@@ -138,15 +135,14 @@ body {
 
 .thumbnails {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 10px;
     flex-wrap: wrap;
 }
 
 .thumbnails img {
-    width: 60px;
-    height: auto;
-    margin: 0 5px;
+    width: 88px;
+    height: 88px;
     cursor: pointer;
     padding: 2px
 }
@@ -188,7 +184,7 @@ body {
     margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 .color-picker-wrapper {
     flex: 1
@@ -237,7 +233,7 @@ body {
 
 
 button {
-    padding: 10px;
+    padding: 16px 0px;
     background-color:  #2455f4;
    border: none;
    color: white;
@@ -245,6 +241,7 @@ button {
    display: block;
     margin-top:24px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .product-description h2 {
@@ -307,11 +304,15 @@ button {
     }
     .thumbnails img {
         width: 45px;
-        margin: 0 3px;
+        height: 45px;
     }
 }
 
 @media (max-width: 480px) {
+
+    .product-title {
+        font-size: 24px;
+    }
    
     .carousel-button {
         padding: 5px;
@@ -321,7 +322,7 @@ button {
     }
 
     .thumbnails img {
-        width: 40px;
-        margin: 0 2px;
+        width: 50px;
+        height: 50px
     }
 }

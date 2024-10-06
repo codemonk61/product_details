@@ -8,9 +8,11 @@ const addToCartButton = document.getElementById('addToCart');
 const cartPopup = document.getElementById('cartPopup');
 const closePopup = document.querySelector('.close-popup');
 const bubble = document.querySelector('.bubble');
-const bar = document.querySelector('.bar');
 const navbar = document.querySelector('.navbar');
 const sizePicker = document.querySelector('.size-picker');
+const increment = document.querySelector('#increment');
+const decrement = document.querySelector('#decrement');
+const count = document.querySelector('#count');
 
 
 const sizes = [
@@ -59,6 +61,17 @@ const fetchData = async () => {
     }
 }
 
+let quantityCounter = 1;
+
+increment.addEventListener('click', ()=> {
+    count.innerText = ++quantityCounter;
+})
+
+decrement.addEventListener('click', ()=> {
+    if(quantityCounter <= 1) return
+    count.innerText = --quantityCounter;
+})
+
 const createSizesBox = () => {
 
     sizes.forEach((datum)=>{
@@ -66,24 +79,9 @@ const createSizesBox = () => {
         sizeDiv.innerHTML = `<p>${datum.name}</p>`;
         sizePicker.appendChild(sizeDiv)
         sizeKey = datum.id;
-        
-        if(sizeKey === datum.id){
-            sizeDiv.classList.add('active-size');
-            sizeKey = datum.id;
-        } 
-        sizeDiv.addEventListener("click", ()=>{
-            console.log(sizeKey, datum.id, sizeKey === datum.id)
-            if(sizeKey === datum.id){
-                sizeDiv.classList.add('active-size');
-                sizeKey = datum.id;
-            } else {
-                sizeDiv.classList.remove('active-size');
-            }
-           
-        })
+
     })  
 }
-
 
 const loadImages = (images) => {
     images.forEach((image, index) => {
@@ -122,6 +120,9 @@ const updateCarousel = () => {
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex === totalImages - 1;
 }
+
+
+
 
 
 prevButton.addEventListener('click', () => {
