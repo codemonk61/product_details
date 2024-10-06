@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    background-color: #2455f4;;
+    background-color: #2455f4;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -164,18 +164,77 @@ body {
 .price {
     font-size: 24px;
 }
-.size-and-quantity-picker-wrapper{
+.size-picker{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.size-picker div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0;
+    font-size: 16px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.color-picker {
     display: flex;
     gap: 8px;
 }
-select, input[type="number"]{
 
-    outline: none;
-    border: 1px solid black;
-    padding: 10px;
-    flex: 1;
+.color-quantity-picker{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.color-picker-wrapper {
+    flex: 1
+}
+.color-picker span {
+    display: block;
+    height: 30px;
+    width:  30px;
+    border-radius: 50%;
+    border: 2px solid black;
     cursor: pointer;
 }
+
+#midnight{
+    background: #191970
+}
+
+#startlight{
+    background: #F8F9EC
+}
+
+#silver{
+    background: silver
+}
+
+.quantity-wrapper {
+    flex: 1;
+}
+
+.quantity-picker {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+}
+.quantity-picker span {
+    display: block;
+    font-size: 20px;
+}
+
+.size-picker div.active-size {
+    border: 1px solid  #2455f4;;
+}
+
 
 button {
     padding: 10px;

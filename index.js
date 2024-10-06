@@ -10,14 +10,40 @@ const closePopup = document.querySelector('.close-popup');
 const bubble = document.querySelector('.bubble');
 const bar = document.querySelector('.bar');
 const navbar = document.querySelector('.navbar');
+const sizePicker = document.querySelector('.size-picker');
 
+
+const sizes = [
+    {
+        name: "4 GB",
+        id: "qwerty123"
+    },
+    {
+        name: "8 GB",
+        id: "qwerty1238"
+    },
+    {
+        name: "16 GB",
+        id: "qwerty1234"
+    },
+    {
+        name: "32 GB",
+        id: "qwerty12345"
+    },
+    {
+        name: "64 GB",
+        id: "qwerty123456"
+    }
+]
 let currentIndex = 0;
+let sizeKey = "qwerty123"
 
 const cachedCartCount = JSON.parse(localStorage.getItem("cartCount"))
 
 let cartCount = cachedCartCount ? cachedCartCount : 0
 
 bubble.innerHTML = cartCount;
+
 const fetchData = async () => {
     
     const cachedData = JSON.parse(localStorage.getItem("images"))
@@ -31,6 +57,31 @@ const fetchData = async () => {
        loadImages(cachedData);
      
     }
+}
+
+const createSizesBox = () => {
+
+    sizes.forEach((datum)=>{
+        const sizeDiv = document.createElement('div');
+        sizeDiv.innerHTML = `<p>${datum.name}</p>`;
+        sizePicker.appendChild(sizeDiv)
+        sizeKey = datum.id;
+        
+        if(sizeKey === datum.id){
+            sizeDiv.classList.add('active-size');
+            sizeKey = datum.id;
+        } 
+        sizeDiv.addEventListener("click", ()=>{
+            console.log(sizeKey, datum.id, sizeKey === datum.id)
+            if(sizeKey === datum.id){
+                sizeDiv.classList.add('active-size');
+                sizeKey = datum.id;
+            } else {
+                sizeDiv.classList.remove('active-size');
+            }
+           
+        })
+    })  
 }
 
 
@@ -107,7 +158,7 @@ closePopup.addEventListener('click', () => {
     cartPopup.style.display = 'none';
 });
 
-
+createSizesBox();
 fetchData();
 window.addEventListener('resize', updateCarousel);
 
