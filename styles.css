@@ -184,7 +184,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 0;
+    flex: 1 0 0;
     font-size: 16px;
     border: 1px solid black;
     cursor: pointer;
@@ -324,6 +324,10 @@ button {
 
 @media (max-width: 768px) {
 
+    .size-picker div {
+        font-size: 12px;
+    }
+
     .carousel-images {
         flex-direction: row;
     }
@@ -335,6 +339,9 @@ button {
 }
 
 @media (max-width: 480px) {
+    .size-picker div {
+        font-size: 14px;
+    }
     .product-container {
         padding: 0;
     }
