@@ -34,7 +34,8 @@ body {
     height: 20px;
     width: 20px;
     text-align: center;
-    line-height: 20px;;
+    line-height: 20px;
+    ;
     font-size: 12px;
     border-radius: 50%;
     background-color: rgb(252, 252, 5);
@@ -116,7 +117,7 @@ body {
 .carousel-button svg {
     fill: #fff;
     height: 16px;
-    width:16px;
+    width: 16px;
 }
 
 .carousel-button.prev {
@@ -126,7 +127,7 @@ body {
 
 .carousel-button.next {
     right: 10px;
-   
+
 }
 
 .carousel-button.next svg {
@@ -157,25 +158,29 @@ body {
     margin: 0;
 }
 
-.price-wrapper{
+.price-wrapper {
     display: flex;
     align-items: first baseline;
     gap: 8px;
 }
+
 .cut-price {
     text-decoration: line-through;
     font-size: 16px;
     color: #1c1c1c44;
 }
+
 .price {
     font-size: 24px;
 }
-.size-picker{
+
+.size-picker {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
-.size-picker div{
+
+.size-picker div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,39 +195,40 @@ body {
     gap: 8px;
 }
 
-.color-quantity-picker{
+.color-quantity-picker {
     margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .color-picker-wrapper {
     flex: 1
 }
 
 .margin-bottom-16 {
     display: block;
- margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .color-picker span {
     display: block;
     height: 30px;
-    width:  30px;
+    width: 30px;
     border-radius: 50%;
     border: 2px solid black;
     cursor: pointer;
 }
 
-#midnight{
+#midnight {
     background: #191970
 }
 
-#startlight{
+#startlight {
     background: #F8F9EC
 }
 
-#silver{
+#silver {
     background: silver
 }
 
@@ -238,24 +244,26 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .quantity-picker span {
     display: block;
     font-size: 20px;
 }
 
 .size-picker div.active-size {
-    border: 1px solid  #2455f4;;
+    border: 1px solid #2455f4;
+    ;
 }
 
 
 button {
     padding: 16px 0px;
-    background-color:  #2455f4;
+    background-color: #2455f4;
     border: none;
     color: white;
     width: 100%;
     display: block;
-    margin-top:24px;
+    margin-top: 24px;
     cursor: pointer;
     font-size: 20px;
 }
@@ -276,7 +284,8 @@ button {
     width: 200px;
     height: 80px;
     background: white;
-    border-radius: 8px;;
+    border-radius: 8px;
+    ;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: none;
@@ -301,7 +310,7 @@ button {
     gap: 8px;
 }
 
-.success-popup{
+.success-popup {
     height: 16px;
     width: 16px;
     font-size: 12px;
@@ -314,22 +323,26 @@ button {
 }
 
 @media (max-width: 768px) {
-  
+
     .carousel-images {
         flex-direction: row;
     }
+
     .thumbnails img {
-        width: 45px;
-        height: 45px;
+        width: 80px;
+        height: 80px;
     }
 }
 
 @media (max-width: 480px) {
+    .product-container {
+        padding: 0;
+    }
 
     .product-title {
         font-size: 24px;
     }
-   
+
     .carousel-button {
         padding: 5px;
         font-size: 18px;
@@ -338,7 +351,17 @@ button {
     }
 
     .thumbnails img {
-        width: 50px;
-        height: 50px
+        width: 60px;
+        height: 60px
+    }
+
+    .product-description {
+        margin-bottom: 60px;
+    }
+
+    #addToCart {
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
 }
