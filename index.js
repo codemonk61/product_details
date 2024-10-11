@@ -13,6 +13,7 @@ const sizePicker = document.querySelector('.size-picker');
 const increment = document.querySelector('#increment');
 const decrement = document.querySelector('#decrement');
 const count = document.querySelector('#count');
+const cartPopupWrapper = document.querySelector('.popup-wrapper');
 
 
 const sizes = [
@@ -141,9 +142,10 @@ nextButton.addEventListener('click', () => {
 
 
 const showCartPopup = () => {
-    cartPopup.style.display = 'block';
+  
+    cartPopupWrapper.style.display = 'block';
     setTimeout(() => {
-        cartPopup.style.display = 'none';
+        cartPopupWrapper.style.display = 'none';
     }, 4000);
 
     bubble.innerHTML =  ++cartCount;
